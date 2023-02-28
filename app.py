@@ -7,7 +7,7 @@ from PIL import Image
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv(r"C:\Users\admin\Desktop\innomatics internship\Project_3\resources\auto-mpg.csv")
+    data = pd.read_csv("auto-mpg.csv")
     return data
 
 df = load_data()
@@ -19,7 +19,7 @@ plot_type = st.sidebar.selectbox("Choose a plot type", ["Histogram", "Boxplot", 
 
 st.title("Data Visualization Dashboard")
 st.header(":red[Cars] Dataset")
-image = Image.open(r"C:\Users\admin\Desktop\innomatics internship\Project_3\resources\car.jpg")
+image = Image.open("car.jpg")
 
 st.image(image, caption='Cars')
 
